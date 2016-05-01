@@ -1,0 +1,267 @@
+
+html {
+	height:100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font: 13px / 1.4 Helvetica, Meiryo, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	border: solid 1px #ddd;
+	border-radius: 3px;
+}
+
+.octicon {
+	width: 16px;
+	text-align: center;
+}
+
+#mylistgroup {
+	float: left;
+	width: 200px;
+	height: 100%;
+	background-color: white;
+	overflow: auto;
+	border-right: solid 1px #ddd;
+	/*overflow-y: scroll; */
+}
+
+.mylist {
+	padding-top: 	10px;
+	padding-bottom: 10px;
+	padding-left:	9px;
+	cursor: pointer;
+}
+
+.mylist:before {
+	content:"";
+	float:left;
+	width: 16px;
+	height: 16px;
+	margin-right: 6px;
+	/*background-image: url('https://freeiconshop.com/files/edd/folder-open-outline-filled.png');*/
+	background-image: url('/image/folder.png');
+	/*background-image: url('http://files.softicons.com/download/web-icons/ikoons-icons-by-dembsky/png/16x16/folder.png');*/
+	/*background-image: url('http://icons.iconarchive.com/icons/janosch500/tropical-waters-folders/16/Empty-icon.png');*/
+	background-size: 16px;
+	background-repeat: no-repeat;
+}
+
+.mylist:hover {
+	background: rgba(0,0,0,.08);
+}
+
+.mylist:active {
+	background: rgba(0,0,0,.15);
+}
+
+.mylist .id {
+	display: none;
+}
+
+#mylistitem {
+	overflow-x: auto;
+	overflow-y: scroll; 
+	height: 549px;
+	background-color: #fafafa;
+
+	/* for kakuyomu */
+	width: 100%;
+    float: left;
+}
+
+#mylistheader {
+	/*background-color: #f5f5f5;*/
+	/*background-color: #4285F4;*/
+	/*background-color: #4777B4;*/
+	/*border-bottom: 1px solid #e8e8e8;*/
+	/*border-bottom: solid 1px black;*/
+	/*background: #333F57;*/
+	/*background: linear-gradient(#333f57, #2d384e);*/
+	background: linear-gradient( to bottom, #427DC4, #427DC4 50%, #2C6EBD 50%, #2C6EBD );
+
+	padding-top: 10px;
+	padding-bottom: 7px;
+	text-align: center;
+
+	border-radius: 3px;
+	border-bottom: solid 1px #333;
+
+	/*overflow: hidden;*/
+}
+
+#headericon{
+	display: inline-block;
+	display: none;
+	background-image: url('/image/nico.png');
+	background-size: 18px 17px;
+	width: 18px;
+	height: 17px;
+	background-repeat: no-repeat;
+	margin-left: 13px;
+
+
+	position: absolute;
+	margin-left: 201px;
+	left: 10px;
+	margin-top: 2px;
+	vertical-align: sub;
+}
+
+#mylisttitle {
+	display: inline;
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 3px;
+	color: white;
+	/*color: #222;*/
+	/*text-shadow: 0 1px 0 white;*/
+
+    position: relative;
+    top: -1px;
+}
+
+#play {
+	display: inline;
+	display: none;
+	width: 200px;
+	height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 9px;
+	cursor: pointer;
+
+	/* gradient button*/
+	text-align: center;
+	background: linear-gradient(#fcfcfc, #eee);
+    border-radius: 3px;
+    border: solid 1px #ccc;
+}
+
+/*#play:before {
+	color: #333;
+	font-size: 20px;
+	font-family: octicons;
+	content: '\f030';
+}*/
+
+#play:after {
+	content: 'このマイリストを連続再生する';
+	color: #333;
+	font-weight: bold;
+	position: relative;
+	top: 4px;
+	text-shadow: 0 1px 0 white;
+}
+
+
+#play:hover {
+	background-image: linear-gradient(#eee, #ddd);
+}
+
+#play:active {
+	background-color: #dcdcdc;
+	box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.20);
+}
+
+.video {
+	background-color: white;
+	border-bottom: solid 1px #eee;
+	padding: 2px 0 2px 7px;
+}
+
+.video:first-child {
+	padding-top: 4px;
+}
+
+.thumbnail {
+	float: left;
+	width:			 98px;
+	height:			 75px;
+	background-size: 98px 75px;
+	border-radius: 3px;
+}
+
+.thumbnail:hover {
+	-webkit-filter: brightness(0.85);
+}
+
+.info {
+	position: relative;
+	padding-top: 5px;
+	height: 70px;
+	margin-left: 107px;
+	vertical-align: middle;
+}
+
+.title {
+	margin-right: 30px;
+	/*font-size: 0.98em;*/
+	/*font-size: 14px;*/
+	font-size: 1.116em;
+	font-weight: bold;
+}
+
+.title .playurl {
+	color: #4078c0;
+	text-decoration: none;
+}
+
+.title .playurl:hover {
+	color: #4078c0;
+	text-decoration: underline;
+}
+
+ul {
+	position: absolute;
+	bottom: 5;
+	right: 7;
+	text-align:right;
+	padding: 0;
+	margin: 0;
+	color: #888;
+	font-size: 12px;
+}
+
+li {
+	display: inline-block;
+	margin-left: 7px;
+	text-align: right;
+}
+
+
+li > .value {
+	font-size: 11px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 white;
+}
+
+li > .icon {
+	font-size: 16px;
+}
+
+li.comment_count {
+	margin-left: 10px;
+}
+
+li > .icon.fa {
+	font-size: 13px;
+	margin-right: 2px;
+}
+
+.upload_time {
+	color: #888;
+	font-size: 11px;
+	margin-top: 3px;
+}
+
+.clear {
+	clear: both;
+}
+
+.nowloading {
+	background-image: url('/image/loading.gif');
+	background-size: 65px;
+	background-repeat: no-repeat;
+	background-position: center;
+}

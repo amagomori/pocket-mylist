@@ -1,0 +1,37 @@
+{
+    "name": "ぽけっとマイリスト",
+	"manifest_version": 2,
+    "version": "1.0",
+     "browser_action": {
+	      "default_icon": "image/icon.png",
+	      "default_title": "マイリストを見る",
+          "default_popup": "html/popup.html"
+	 },
+    "description": "ニコニコ動画のマイリストをポップアップ表示します．", 
+    "icons": {
+        "16": "image/icon.png", 
+        "32": "image/icon.png", 
+        "64": "image/icon.png"
+    }, 
+    "permissions": [
+        "storage",
+        "unlimitedStorage", 
+        "notifications", 
+        "tabs",
+        "background",
+        "alarms",
+        "notifications",
+        "https://secure.nicovideo.jp/",
+        "http://live.nicovideo.jp/",
+        "http://api.ce.nicovideo.jp/",
+        "http://www.nicovideo.jp/",
+        "http://tn-skr3.smilevideo.jp/"
+    ],
+    "background": {
+        "persistent": true,
+	    "scripts": ["js/jquery-2.1.4.min.js"]
+	},
+    "web_accessible_resources": [
+        "image/icon.png"
+    ]
+}
