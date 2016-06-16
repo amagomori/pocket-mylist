@@ -1,7 +1,7 @@
 {
     "name": "ニコニコ動画 ポップアップでマイリスト",
 	"manifest_version": 2,
-    "version": "1.0.2",
+    "version": "1.0.3",
      "browser_action": {
 	      "default_icon": "image/icon.png",
 	      "default_title": "マイリストを見る",

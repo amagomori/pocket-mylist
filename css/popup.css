@@ -39,10 +39,7 @@ body {
 	width: 16px;
 	height: 16px;
 	margin-right: 6px;
-	/*background-image: url('https://freeiconshop.com/files/edd/folder-open-outline-filled.png');*/
 	background-image: url('/image/folder.png');
-	/*background-image: url('http://files.softicons.com/download/web-icons/ikoons-icons-by-dembsky/png/16x16/folder.png');*/
-	/*background-image: url('http://icons.iconarchive.com/icons/janosch500/tropical-waters-folders/16/Empty-icon.png');*/
 	background-size: 16px;
 	background-repeat: no-repeat;
 }
@@ -70,15 +67,21 @@ body {
     float: left;
 }
 
+.logoback {
+	background-image: url('../image/ff.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #mylistheader {
 	background: linear-gradient( to bottom, #427DC4, #427DC4 50%, #2C6EBD 50%, #2C6EBD );
 
-	padding-top: 10px;
+	padding-top: 9px;
 	padding-bottom: 7px;
 	text-align: center;
 
-	border-radius: 3px;
-	border-bottom: solid 1px #333;
+	border-radius: 0 3px 0 0;
 
 	/*overflow: hidden;*/
 }
@@ -107,8 +110,6 @@ body {
 	font-weight: bold;
 	margin-left: 3px;
 	color: white;
-	/*color: #222;*/
-	/*text-shadow: 0 1px 0 white;*/
 
     position: relative;
     top: -1px;
@@ -182,8 +183,6 @@ body {
 
 .title {
 	margin-right: 30px;
-	/*font-size: 0.98em;*/
-	/*font-size: 14px;*/
 	font-size: 1.116em;
 	font-weight: bold;
 }

@@ -26,6 +26,8 @@ $(function()
 $(function()
 {
 	$(document).on('click','.mylist',function() {
+		removeBackground();
+		
 		const dom 	  = new MyListView($(this));
 		const loading = new Loading($('#mylistitem'));
 		const id 	  = $(this).find('.id').text();
@@ -47,3 +49,7 @@ $(function()
     	$('#mylisttitle').text($(this).find('.name').text());
 	});
 });
+
+function removeBackground() {
+	$('#mylistitem').removeClass('logoback');
+}
