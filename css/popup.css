@@ -18,11 +18,12 @@ body {
 
 #mylistgroup {
 	float: left;
-	width: 200px;
+	width: 190px;
 	height: 100%;
 	background-color: white;
 	overflow: auto;
 	border-right: solid 1px #ddd;
+	/*overflow-y: scroll; */
 }
 
 .mylist {
@@ -37,9 +38,20 @@ body {
 	float:left;
 	width: 16px;
 	height: 16px;
+
+	
 	margin-right: 6px;
 	background-image: url('/image/folder.png');
 	background-size: 16px;
+
+
+/*
+	margin-right: 5px;
+	background-image: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAYAAAC5DOVpAAABLElEQVR4Xs2Ur0oEURhHz10UwQkmg6DNZvQFDAafYsHiGgwGg8lg1S5jEcEiNvEBLPZFQbC5yWCSdZf5ez/5wQUHlpW7sqAHPhi+4R4OA3ecmTEtWkyRGYDj7Y0dIGWUztHF/flEMon2DvcRSZIgXl+euL66TYF4maoWV1bpPT4gnPOIls9YXlpQtSEiqlWW7h60wQAMMwQYrG0Gj4V9eFm89zg9uVS1xjVlmBnOV4DhzIPG+/Bc43wddjUif3v+4Zt5QLKGCEmqofZhJKwZT7OsLiVSBTQlEoQy8s8IWS1ZARKVA7AgUiGqNMj6ABEyHaoKKPvfNRJoMMgHBOLKUFmVAUESkOjvrtNH9475uVliGeblWFnn7KabMiHrW21GMDPs99AclQn37/5nX4eJ9e7eNnr7AAAAAElFTkSuQmCC) 1x);
+	background-size: 19px 18px;*/
+
+
+
 	background-repeat: no-repeat;
 }
 
@@ -60,23 +72,30 @@ body {
 	overflow-y: scroll; 
 	height: 549px;
 	background-color: #fafafa;
+
+	/* for kakuyomu */
+	width: 100%;
+    float: left;
 }
 
 .logoback {
 	background-image: url('../image/ff.png');
-    background-size: 100px;
+	background-size: 100px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #mylistheader {
-	background-color: #3367d6;
-
-	padding-top: 12px;
-	padding-bottom: 9px;
+	/*background: linear-gradient( to bottom, #427DC4, #427DC4 50%, #2C6EBD 50%, #2C6EBD );*/
+	background: linear-gradient(to bottom, #427DC4, #2C6EBD);
+	border-bottom: solid 1px #2d53af;
+	padding-top: 9px;
+	padding-bottom: 7px;
 	text-align: center;
 
 	border-radius: 0 3px 0 0;
+
+	/*overflow: hidden;*/
 }
 
 #headericon{
@@ -120,14 +139,13 @@ body {
 
 	/* gradient button*/
 	text-align: center;
-	/*background: linear-gradient(#fcfcfc, #eee);*/
-	background: linear-gradient(to bottom, #427DC4, #2C6EBD);
+	background: linear-gradient(#fcfcfc, #eee);
     border-radius: 3px;
     border: solid 1px #ccc;
 }
 
 #play:after {
-	content: 'このマイリストを連続再生する';
+	content: '連続再生する';
 	color: #333;
 	font-weight: bold;
 	position: relative;
@@ -177,10 +195,12 @@ body {
 
 .title {
 	margin-right: 30px;
-	font-size: 15px;
+	font-size: 1.116em;
+	font-weight: bold;
 }
 
 .title .playurl {
+	color: #4078c0;
 	text-decoration: none;
 }
 
@@ -241,4 +261,16 @@ li > .icon.fa {
 	background-size: 65px;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+/* Gmail scroll bar */
+::-webkit-scrollbar {
+	width: 9px;
+	background: #eee; /* same color as the background */
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,0.2);
+	border-top: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.07);
+	border-left: 1px solid rgba(0,0,0,0.1);
 }
