@@ -20,16 +20,15 @@ function refresh() {
 	.then(setBadgeText);
 }
 
-function loadLiveStreams() {
-
-	return new Promise(function(resolve, reject) {
-
-		getSessionId().then(getSubscribe).then(normalize).then(
-
+function loadLiveStreams()
+{
+	return new Promise(function(resolve, reject){
+		getSessionId()
+		.then(getSubscribe)
+		.then(normalize)
+		.then(
 			function($videoInfos) {
-
 				var $videoInfosNow = removeReservation($videoInfos);
-
 				resolve($videoInfosNow);
 			}
 		).catch(reject);
