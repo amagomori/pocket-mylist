@@ -35,23 +35,23 @@ function loadLiveStreams()
 	});
 }
 
-function count(obj) {
+function count(obj)
+{
 
 	return new Promise(function(resolve, reject) {
-
 		if (obj === null || obj === undefined) {
-			reject(new Error('Object for count is invalid.'))
+			reject(new Error('Object for count is invalid.'));
 		}
-
 		resolve(obj.length);
 	});
 }
 
-function setBadgeText(value) {
-
-	return new Promise(function(resolve, reject) {
-
-		chrome.browserAction.setBadgeText({text: String(value)});
+function setBadgeText(value)
+{
+	return new Promise(function(resolve, reject){
+		chrome.browserAction.setBadgeText(
+			{text: String(value)}
+		);
 		resolve();
 	});
 }
