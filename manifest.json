@@ -1,5 +1,5 @@
 {
-    "name": "ニコニコ動画 ポップアップでマイリスト",
+    "name": "ニコニコ動画 小窓マイリスト",
 	"manifest_version": 2,
     "version": "1.0.5",
      "browser_action": {
