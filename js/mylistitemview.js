@@ -25,7 +25,18 @@ class MyListItemView
         let dom = template.clone();
 
         dom.find('.playurl').attr('href', vid.playUrl);
-        dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail} ")`);
+
+        console.log(vid.id);
+        // console.log(typeof(vid.id));
+        if (vid.id >= 24000000) {
+            console.log('M');
+            dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail}.M ")`);
+        } else if (vid.id >= 17000000) {
+            dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail}.L ")`);
+        } else {
+            dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail} ")`);
+        }
+        
         dom.find('.title .playurl').text(vid.title);
         dom.find('.id').text(video.id);
         dom.find('.upload_time').text(Time.jpStr(vid.uploadTime));
