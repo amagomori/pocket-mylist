@@ -13,5 +13,7 @@ class Video
         this.subscribeCount = item.mylist_counter;
 
         this.favoriteTime   = video.create_time;
+
+        this.idType           = (item.video_id).slice(0, 2);
     }
 }

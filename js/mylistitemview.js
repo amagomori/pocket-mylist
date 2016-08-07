@@ -36,6 +36,15 @@ class MyListItemView
         } else {
             dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail} ")`);
         }
+
+        switch (vid.idType) {
+            case "so":
+            case "nm":
+                dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail} ")`);
+                break;
+            default:
+                break;
+        } 
         
         dom.find('.title .playurl').text(vid.title);
         dom.find('.id').text(video.id);
