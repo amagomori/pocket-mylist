@@ -34,15 +34,33 @@ body {
 
     font-size: 14px;
     line-height: 38px;
+    height: 38px;
     font-weight: bold;
+
+    vertical-align: middle;
 
     padding-left: 10px;
 
 	border: 1px solid #c9e6f2;
 	border-radius: 3px 0 0 0;
 
-
+/*	background-image: url('/image/icon.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 6px 9px;*/
 	
+}
+
+#header:before {
+	font-family: 'octicons';
+	font-size: 19px;
+    line-height: 0px;
+	content: '\f018';
+	margin-right: 5px;
+
+	position: relative;
+	top: 2px;
+
 }
 
 #mylistgroup {
@@ -136,7 +154,10 @@ body {
 
 	/* for kakuyomu */
 	width: 100%;
-    float: left;
+    /*float: left;*/
+
+
+	padding-top: 10px;
 }
 
 .logoback {
@@ -238,10 +259,13 @@ body {
 
 	/*width: 28%;*/
 	width: 160px;
+	display: inline-block;
+	vertical-align: top;
 	/*width: 200px;*/
-	float: left;
+	/*float: left;*/
 
-	margin: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
 
 	border-radius: 3px;
 	    box-shadow: 0 0 5px rgba(0,0,0,0.1);
