@@ -27,24 +27,8 @@ class MyListItemView
         dom.find('.playurl').attr('href', vid.playUrl);
 
         console.log(vid.id);
+        MyListItemView.setThumbnail(dom, vid);
         // console.log(typeof(vid.id));
-        if (vid.id >= 24000000) {
-            console.log('M');
-            dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail}.M ")`);
-        } else if (vid.id >= 17000000) {
-            dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail}.L ")`);
-        } else {
-            dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail} ")`);
-        }
-
-        switch (vid.idType) {
-            case "so":
-            case "nm":
-                dom.find('.thumbnail').css('background-image', `url(" ${vid.thumbnail} ")`);
-                break;
-            default:
-                break;
-        } 
         
         dom.find('.title .playurl').text(vid.title);
         dom.find('.id').text(video.id);
@@ -54,6 +38,37 @@ class MyListItemView
         dom.find('.subscribe_count .value').text(Number(vid.subscribeCount).toLocaleString());
 
         return dom;
+    }
+
+    static setThumbnail(dom, vid) {
+        const $thumbnail = dom.find('.thumbnail');
+        switch (vid.idType) {
+            case "so":
+                $thumbnail.css('background-image', `url(" ${vid.thumbnail} ")`);
+                $thumbnail.addClass('letterbox');
+                return;
+            case "nm":
+                $thumbnail.css('background-image', `url(" ${vid.thumbnail} ")`);
+                $thumbnail.addClass('classic');
+                return;
+            default:
+                break;
+        }
+        if (vid.id < 17000000) {
+            $thumbnail.css('background-image', `url(" ${vid.thumbnail} ")`);
+            $thumbnail.addClass('classic');
+            return;
+        }
+        if (vid.id < 24000000) {
+            $thumbnail.css('background-image', `url(" ${vid.thumbnail}.L ")`);
+            $thumbnail.addClass('letterbox');
+            return;
+        }
+        if (vid.id >= 24000000) {
+            $thumbnail.css('background-image', `url(" ${vid.thumbnail}.M ")`);
+            $thumbnail.addClass('medium');
+            return;
+        }
     }
 
     static getTemplate() {

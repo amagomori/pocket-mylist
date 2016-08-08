@@ -6,7 +6,7 @@ class Video
         this.playUrl       = 'http://www.nicovideo.jp/watch/' + item.video_id;
         this.thumbnail      = item.thumbnail_url;
         this.title          = item.title;
-        this.id             = Number((item.watch_id).slice(2));
+        this.id             = (item.watch_id).slice(2);
         this.uploadTime     = item.first_retrieve;
         this.playCount      = item.view_counter;
         this.commentCount   = item.num_res;
