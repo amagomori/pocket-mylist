@@ -1,7 +1,8 @@
 {
     "name": "ニコニコ動画 小窓マイリスト",
+    "short_name": "小窓マイリスト",
 	"manifest_version": 2,
-    "version": "1.1.0",
+    "version": "1.1.1",
      "browser_action": {
 	      "default_icon": "image/icon.png",
 	      "default_title": "マイリストを見る",

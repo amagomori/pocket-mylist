@@ -5,10 +5,13 @@ html {
 
 body {
 	margin: 0;
-	padding: 0;
+	padding: 1px;
 	font: 13px / 1.4 Helvetica, Meiryo, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	border-radius: 3px;
-	background-color: #FAFAFA;
+	/*background-color: #FAFAFA;*/
+	/*background-color: #F9F9F9;*/
+	/*background-color: */
+	overflow: hidden !important;
 }
 
 .octicon {
@@ -20,7 +23,10 @@ body {
 	float: left;
 	width: 200px;
 	height: 100%;
+	margin-right: 5px;
 	overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+
 }
 
 #header {
@@ -38,20 +44,20 @@ body {
 
 #header:before {
 	font-family: 'octicons';
-	font-size: 19px;
+	font-size: 21px;
+	/*font-size: 21px;*/
     line-height: 0px;
-	content: '\f018';
-	margin-right: 5px;
-
+	content: '\f02a';
+	margin-right: 4px;
+	font-weight: normal;
 	position: relative;
-	top: 2px;
+	top: 4px;
 
 }
 
 #mylistgroup {
 	overflow: auto;
 	height: 100%;
-
 }
 
 .mylist {
@@ -105,14 +111,24 @@ body {
 	display: none;
 }
 
+#mainview {
+	border: solid 1px #ddd;
+	border-radius: 3px;
+}
+
 #mylistitem {
 	overflow-x: auto;
 	overflow-y: scroll; 
-	height: 549px;
-	background-color: #FCFCFC;
+	/*height: 549px;*/
+	height: 540px;
+	/*background-color: #FCFCFC;*/
+	background-color: #FEFEFE;
+	/*background-color: white;*/
 
     text-shadow: 0 1px 0 #fff;
 	
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+
 
 	/* for kakuyomu */
 	width: 100%;
@@ -128,14 +144,15 @@ body {
 }
 
 #mylistheader {
-	background-color: #E6F1F6;
-	background-color: #F5F5F5;
+	/*background-color: #F5F5F5;*/
+	background-color: #F4F4F4;
 
 	font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Meiryo, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	border: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	border-left: 0;
-	text-align: center;
+	/*text-align: center;*/
 
+	padding-left: 5px;
 	border-radius: 0 3px 0 0;
 }
 
@@ -170,11 +187,31 @@ body {
 }
 
 #mylisttitle:before {
+	font-family: 'octicons';
+	font-size: 16px;
+    line-height: 0px;
+	content: '\f016';
+	margin-right: 4px;
+	font-weight: normal;
+	position: relative;
+	top: 1px;
+	margin-left: 2px;
+
+/*	font-family: 'octicons';
+	content: '\f016';
+	color: #333;
+	font-size: 16px;
+	margin-right: 5px;
+	margin-left: 2px;
+	font-weight: normal;
+*/}
+
+/*#mylisttitle:before {
 	background-size: 17px;
 
 	position: relative;
-	top: -3px;*/
-}
+	top: -3px;
+}*/
 
 #play {
 	display: inline;
@@ -223,7 +260,9 @@ body {
 	margin-bottom: 10px;
 
 	border-radius: 3px;
-	    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    /*box-shadow: 0 0 5px rgba(0,0,0,0.1);*/
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+
 }
 
 .video:hover {
@@ -238,9 +277,10 @@ body {
 	position: absolute;
     bottom: 2px;
     right: 2px;
+    text-shadow: 0 0 0;
     color: #fefefe;
-    font-size: 5px;
-    padding: 2px 4px;
+    font-size: 12px;
+    padding: 1px 5px;
     background-color: rgba(0, 0, 0, 0.6);
     /*background-color: black;*/
     /*opacity: .80;*/
@@ -315,9 +355,10 @@ ul {
 	margin: 0;
 	color: #999;
 	font-size: 12px;
-
-		border-top: solid 1px #eee;
+	border-top: solid 1px #eee;
 	background-color: #fefefe;
+
+	border-radius: 0 0 3px 3px;
 }
 
 li {

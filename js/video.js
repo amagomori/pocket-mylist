@@ -1,6 +1,7 @@
 class Video
 {
     constructor(video) {
+        console.log(video);
         let item = video.item_data;
 
         this.playUrl       = 'http://www.nicovideo.jp/watch/' + item.video_id;
@@ -11,9 +12,13 @@ class Video
         this.playCount      = item.view_counter;
         this.commentCount   = item.num_res;
         this.subscribeCount = item.mylist_counter;
-
         this.favoriteTime   = video.create_time;
+
+        this.play_secTime  = Math.floor(item.length_seconds % 60);
+        this.play_minTime  = Math.floor((item.length_seconds / 60) % 60);
 
         this.idType           = (item.video_id).slice(0, 2);
     }
+
+
 }
