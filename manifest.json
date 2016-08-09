@@ -15,7 +15,6 @@
         "64": "image/icon.png"
     }, 
     "permissions": [
-        "tabs",
         "https://secure.nicovideo.jp/",
         "http://live.nicovideo.jp/",
         "http://api.ce.nicovideo.jp/",

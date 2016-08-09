@@ -12,6 +12,7 @@ body {
 	/*background-color: #F9F9F9;*/
 	/*background-color: */
 	overflow: hidden !important;
+	background-image: url('/image/ad-stripe.png')
 }
 
 .octicon {

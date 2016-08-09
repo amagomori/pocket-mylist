@@ -19,8 +19,8 @@ $(function()
 			}
 			MyListView.show(mylists);
 			loading.done();
-		});
-		// .then(loading.done());
+		})
+		.then(loading.done());
 });
 
 $(function()
