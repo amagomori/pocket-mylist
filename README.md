@@ -11,4 +11,4 @@ pocket-mylist can popup mylist quickly as Browser Action of Chrome API.
 
 ##Demo
 
-![Alt Text](http://s2.gazo.cc/up/38255.png)
+![Alt Text](https://tsuyuno.github.io/resources/pokemy.png)
