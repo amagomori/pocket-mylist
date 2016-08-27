@@ -1,88 +1,53 @@
-
 html {
 	height:100%;
 }
-
 body {
 	margin: 0;
-	/*padding: 1px;*/
 	font: 13px / 1.4 Helvetica, Meiryo, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	/*border-radius: 3px;*/
-	/*background-color: #FAFAFA;*/
-	/*background-color: #F9F9F9;*/
-	/*background-color: */
 	overflow: hidden !important;
-	/*background-image: url('/image/ad-stripe.png')*/
 	color: #222;
 	border: solid 1px #ddd;
 }
-
 @font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
-       url(../fonts/MaterialIcons-Regular.woff) format('woff'),
-       url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/MaterialIcons-Regular.eot); 
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+	url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+	url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
 }
-
 .octicon {
 	width: 16px;
 	text-align: center;
 }
-
 #menu {
 	float: left;
 	width: 185px;
 	height: 100%;
 	overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
-    /*margin-right: 5px;*/
-
+    
 }
-
 #header {
 	background-color: white;
 	background: linear-gradient( to bottom, #4f4f4f, #4f4f4f 50%, #444 50%, #444 );
-
-	/*color: #767676;*/
 	color: white;
     line-height: 43px;
     height: 42px;
     font-weight: bold;
-    /*vertical-align: middle;*/
+    
     padding-left: 10px;
 	border-bottom: 1px solid #eee;
-	/*text-shadow: 0 1px 0 white;*/
-
 	display: none;
-
-
-
 	font-weight: bold;
 	font-size: 15px;
 	padding-left: 13px;
-
-        /*text-shadow: 0 1px 0 #333;*/
-	/*text-shadow: 0 1px 0 white;*/
-
-	/*display: none;*/
+	 
 }
-
 #header:before {
-/*	font-family: 'octicons';
-	font-size: 21px;
-    line-height: 0px;
-	content: '\f02a';
-	margin-right: 4px;
-	font-weight: normal;
-	position: relative;
-	top: 4px;*/
-
 	content: "";
 	background-image: url('../image/16.png');
 	background-size: 19px;
@@ -90,44 +55,29 @@ body {
 	float:left;
 	width: 19px;
 	height: 19px;
-
 	background-repeat: no-repeat;
-
 	position: relative;
 	top: 11px;
 	left: -1px;
-
 	margin-right: 5px;
-
-/*	background-color: #767676;
-	border-radius: 99999px;*/
 }
-
 #mylistgroup {
 	overflow: auto;
 	height: 100%;
 }
-
 .mylist {
 	background-color: white;
 	padding-top: 	10px;
 	padding-bottom: 9px;
 	padding-left:	9px;
 	cursor: pointer;
-
 	border-bottom: solid 1px #ececec;
-
 	color: #111;
 	color: #222;
 	font-size: 100%;
-	/*font-weight: bold;*/
 }
-
 .mylist:before {
-	/*font-family: 'octicons';*/
 	font-family: 'Material Icons';
-	/*content:"\f016";*/
-	/*content: "\E2C7";*/
 	content: "";
 	background-image: url('../image/yellow-folder.png');
 	background-size: 16px;
@@ -135,151 +85,61 @@ body {
 	float:left;
 	width: 16px;
 	height: 16px;
-	/*background-color: #3E50B4;*/
-	/*border-radius: 99999px;*/
-
-	
 	margin-right: 9px;
-	/*background-size: 17px;*/
-
-	/*background-position: top -10px left 0px;*/
-	/*text-align: center;*/
-
 	position: relative;
-	/*top: -3px;*/
-
-	/*color: #757575;*/
-
 	background-repeat: no-repeat;
 }
-
 .mylist:hover {
 	background-color: #F7F7F7;
 }
-
 .mylist:active {
 	background-color: #EEEEEE;
 }
-
 .mylist .id {
 	display: none;
 }
-
 #mainview {
 }
-
 #mylistitem {
 	overflow-x: auto;
 	overflow-y: scroll; 
-	/*height: 549px;*/
 	height: 546px;
-	/*background-color: #EEEEEE;*/
 	background-color: #F5F8FA;
-	/*background-color: #FEFEFE;*/
-	/*background-color: white;*/
-	/*background-color: #FAFAFA;*/
-
-	    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
-
+	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
     text-shadow: 0 1px 0 #fff;
-	
     box-shadow: 0 0 10px rgba(0,0,0,0.20);
-
-
-	/* for kakuyomu */
-	/*width: 100%;*/
-
 	padding-top: 10px;
 	padding-left: 5px;
 }
-
 .logoback {
 	background-image: url('../image/ff.png');
 	background-size: 100px;
     background-repeat: no-repeat;
     background-position: center;
 }
-
 #mylistheader {
 	background-color: #3E50B4;
-	/*background-color: #3F51BE;*/
-	/*background-color: #546C78;*/
-	/*background-color: #E8EFF3;*/
-	/*background: linear-gradient( to bottom, #427DC4, #427DC4 50%, #2C6EBD 50%, #2C6EBD );*/
-
 	font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Meiryo, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	/*border-bottom: 1px solid #ddd;*/
 	border-left: 0;
-	/*text-align: center;*/
-
 	padding-left: 5px;
-	/*border-radius: 0 3px 0 0;*/
-	    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-
-	    position: relative;
-	    z-index: 999;
-
-
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+	position: relative;
+	z-index: 999;
 }
-
 #headericon{
-/*	display: inline-block;
-	display: none;
-	background-image: url('/image/nico.png');
-	background-size: 18px 17px;
-	width: 18px;
-	height: 17px;
-	background-repeat: no-repeat;
-	margin-left: 13px;
-
-
-	position: absolute;
-	margin-left: 201px;
-	left: 10px;
-	margin-top: 2px;
-	vertical-align: sub;*/
 }
-
 #mylisttitle {
 	display: inline;
-	/*font-size: 15px;*/
 	font-weight: bold;
 	font-size: 15px;
 	margin-left: 13px;
-	/*color: #333;*/
 	color: white;
 	line-height: 42px;
-
     position: relative;
-    /*top: -1px;*/
-
-        /*text-shadow: 0 1px 0 #333;*/
-	/*text-shadow: 0 1px 0 white;*/
-
+    
+	 
 }
-
 #mylisttitle:before {
-/*	font-family: 'octicons';
-	font-size: 16px;
-    line-height: 0px;
-	content: '\f016';
-	margin-right: 4px;
-	font-weight: normal;
-	position: relative;
-	top: 1px;
-	margin-left: 2px;*/
-	
-
-/*	font-family: 'octicons';
-	content: '\f016';
-	color: #333;
-	font-size: 16px;
-	margin-right: 5px;
-	margin-left: 2px;
-	font-weight: normal;
-*/
-
-	/*font-family: "Material Icons";*/
 	content: "";
 	background-image: url('../image/ic_collections_bookmark_white_48dp_2x.png');
 	background-size: 23px;
@@ -287,25 +147,12 @@ body {
 	float:left;
 	width: 23px;
 	height: 23px;
-
 	background-repeat: no-repeat;
-
 	position: relative;
 	top: 10px;
 	left: 7px;
-
 	margin-right: 5px;
-
-
 }
-
-/*#mylisttitle:before {
-	background-size: 17px;
-
-	position: relative;
-	top: -3px;
-}*/
-
 #play {
 	display: inline;
 	display: none;
@@ -315,14 +162,11 @@ body {
     right: 20px;
     top: 9px;
 	cursor: pointer;
-
-	/* gradient button*/
 	text-align: center;
 	background: linear-gradient(#fcfcfc, #eee);
-    /*border-radius: 3px;*/
+    
     border: solid 1px #ccc;
 }
-
 #play:after {
 	content: '連続再生する';
 	color: #333;
@@ -331,41 +175,25 @@ body {
 	top: 4px;
 	text-shadow: 0 1px 0 white;
 }
-
-
 #play:hover {
 	background-image: linear-gradient(#eee, #ddd);
 }
-
 #play:active {
 	background-color: #dcdcdc;
 	box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.20);
 }
-
 .video {
 	background-color: white;
 	border: solid 1px #ddd;
 	width: 160px;
 	display: inline-block;
 	vertical-align: top;
-
 	margin-left: 10px;
 	margin-bottom: 10px;
-
-	/*border-radius: 3px;*/
     box-shadow: 0 0 2px rgba(0,0,0,0.2);
-\
-
 }
-
 .video:hover {
 }
-
-/*.video:first-child {
-	padding-top: 4px;
-}*/
-
-
 .video_length {
 	position: absolute;
     bottom: 2px;
@@ -375,137 +203,106 @@ body {
     font-size: 12px;
     padding: 1px 5px;
     background-color: rgba(0, 0, 0, 0.6);
-    /*background-color: black;*/
-    /*opacity: .80;*/
-    /*border-radius: 3px;*/
+    
+    
+    
     font-weight: normal;
-    /*font-family: メイリオ, Meiryo, verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;*/
+    
 }
-
 .thumbnail {
 	width:			 160px;
 	height:			 90px;
 	background-color: black;
-	/*border-radius: 3px 3px 0 0;*/
 	background-repeat: no-repeat;
 	position: relative;
-
 }
-
 .thumbnail.classic {
 	background-size: contain;
 	background-position: top center;
 }
-
 .thumbnail.medium {
-	/*background-size: 160px 90px;*/
 	background-size: contain;
 	background-position: top center;
 }
-
-/* Letter Box */
 .thumbnail.letterbox {
 	background-size: cover;
 	background-position: center center;
 }
-
 .thumbnail:hover {
 	-webkit-filter: brightness(0.85);
 }
-
 .info {
 	position: relative;
 	vertical-align: middle;
 }
-
 .title {
 	font-weight: bold;
 	margin: 5px;
 	margin-top: 5px;
 	height: 54px;
-
 	overflow : hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
-
 	color: #4078c0;
 }
-
 .title .playurl {
 	color: #4078c0;
 	text-decoration: none;
 }
-
 .title .playurl:hover {
 	color: #4078c0;
 	text-decoration: underline;
 }
-
 .count {
 	padding: 5px;
 	margin: 0;
 	color: #888;
 	font-size: 12px;
 	border-top: solid 1px #ececec;
-	/*background-color: #fefefe;*/
 	background-color: #FAFAFA;
-
 	border-radius: 0 0 3px 3px;
-
 	overflow: hidden;
 	font-size: 8px;
 }
-
 dl {
 	float: left;
-	/*display: inline-block;*/
-	/*margin-right: 5px;*/
 	margin: 0;
 	padding: 0;
-    /*margin-right: 6px;*/
+    
     white-space: nowrap;
 	width: 49px;
 }
-
 dt {
 	overflow: hidden;
 	color: #999;
 }
-
 dd {
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
 }
-
-
 .octicon {
 	width: 12px;
 }
-
 .upload_time {
 	color: #888;
 	font-size: 11px;
 	margin-top: 3px;
 }
-
 .clear {
 	clear: both;
 }
-
 .nowloading {
 	background-image: url('/image/loading.gif');
 	background-size: 65px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
-/* Gmail scroll bar */
 ::-webkit-scrollbar {
 	width: 9px;
-	background: #eee; /* same color as the background */
+	background: #eee; 
 }
 ::-webkit-scrollbar-thumb {
 	background-color: rgba(0,0,0,0.2);
