@@ -33,10 +33,7 @@ class MyListItemView
         dom.find('.video_length').text(vid.play_minTime + ':' + ('0' + vid.play_secTime).slice(-2));
         dom.find('.title .playurl').text(vid.title);
         dom.find('.id').text(video.id);
-        dom.find('.upload_time').text(Time.jpStr(vid.uploadTime));
-        dom.find('.play_count .value').text(Number(vid.playCount).toLocaleString());
-        dom.find('.comment_count .value').text(Number(vid.commentCount).toLocaleString());
-        dom.find('.subscribe_count .value').text(Number(vid.subscribeCount).toLocaleString());
+        dom.find('.viewcount').text(Number(vid.playCount).toLocaleString());
 
         return dom;
     }
