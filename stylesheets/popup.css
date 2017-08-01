@@ -44,7 +44,7 @@ body {
 }
 .header:before {
 	content: "";
-	background-image: url('../image/ic_account_circle_white_48dp_2x.png');
+	background-image: url('../image/16.png');
 	background-size: 20px;
 	font-size: 20px;
 	float:left;
