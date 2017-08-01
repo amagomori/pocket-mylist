@@ -26,7 +26,12 @@ $(function()
 $(function()
 {
 	$(document).on('click','.mylist',function() {
-		removeBackground();
+		$('#mylistitem').addClass('logoback');
+
+		$('.mylist').removeClass('selected');
+		$(this).addClass('selected');
+		
+		MyListItemView.clear();
 		
 		const dom 	  = new MyListView($(this));
 		const loading = new Loading($('#mylistitem'));
@@ -38,7 +43,7 @@ $(function()
 			getapi = Nicoapi.getMylistItem;
 		}
 		getapi(id).then(function(videos) {
-			MyListItemView.clear();
+			$('#mylistitem').removeClass('logoback');
 			if (videos.length === 0) {
 				MyListItemView.message('NO_ITEM');
 			}
@@ -51,5 +56,4 @@ $(function()
 });
 
 function removeBackground() {
-	$('#mylistitem').removeClass('logoback');
 }

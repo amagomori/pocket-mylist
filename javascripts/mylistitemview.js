@@ -44,7 +44,9 @@ class MyListItemView
         dom.find('.title .playurl').text(vid.title);
         dom.find('.id').text(video.id);
         dom.find('.upload_time').text(MyListItemView.jpDate(vid.uploadTime));
-        dom.find('.viewcount').text(Number(vid.playCount).toLocaleString());
+        dom.find('.viewCount').text(Number(vid.playCount).toLocaleString());
+        dom.find('.commentCount').text(Number(vid.commentCount).toLocaleString());
+        dom.find('.subscribecount').text(Number(vid.subscribeCount).toLocaleString());
 
         return dom;
     }

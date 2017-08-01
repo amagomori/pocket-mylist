@@ -1,7 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 html {
 	height:100%;
 }
 body {
+	font-family: 'Noto Sans Japanese';
 	margin: 0;
 	font-size: 13px;
 	overflow: hidden !important;
@@ -19,42 +23,43 @@ body {
 	width: 200px;
 	height: 100%;
 	overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    background-color: #2D2D2D;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.3); */
 }
 #mylistgroup {
     height: inherit;
     overflow: auto;
 }
 .header {
-	background-color: white;
-	background-color: #222;
-	color: white;
-    line-height: 40px;
-    height: 40px;
+    /* background-color: #333; */
+		/* background-color: #f5f5f5; */
+		 background: #3E50B4; 
+		/* background:  */
+    color: white;
+    line-height: 27px;
+    height: 25px;
     padding-left: 10px;
-    border-top: solid 1px #000;
-	border-bottom: solid 1px #000;
-	font-weight: 500;
-	font-size: 14px;
-	 
+    /* border-top: solid 1px #000; */
+    border-bottom: solid 1px #222;
+    /* font-weight: bold; */
+    font-size: 14px;
 }
 .header:first-child {
 	border-top: 0;
 }
+
 .header:before {
-	content: "";
-	background-image: url('../image/16.png');
-	background-size: 20px;
-	font-size: 20px;
-	float:left;
-	width: 20px;
-	height: 20px;
-	background-repeat: no-repeat;
-	position: relative;
-	top: 10px;
-	left: 0px;
-	margin-right: 7px;
+    content: "";
+    background-image: url(../image/16.png);
+    background-size: 15px;
+    font-size: 15px;
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 5px;
+    left: 0px;
+    margin-right: 7px;
 }
 #savedlist-header:before {
 	background-image: url('../image/ic_video_library_white_48dp_2x.png');
@@ -64,28 +69,35 @@ body {
 }
 .header-child {
 	overflow: auto;
-	background-color: #2D2D2D;
 	padding-bottom: 10px;
-	border-bottom: solid 1px #3F3F3F;
-	border-top: solid 1px #444;
+	/* border-top: solid 1px #444; */
 }
 .header-child:last-child {
 	border-bottom: 0;
 }
 .mylist {
-	/*background-color: white;*/
-	background-color: #2D2D2D;
-	padding-top: 	11px;
-	padding-bottom: 10px;
+	/* background-color: #272B34; */
+		background-color: #f0f0f0;
+		/* border-bottom: solid 1px #dcdcdc;   */
+			    /* text-shadow: 0 1px 0 #fff; */
+	padding-top: 	7px;
+	padding-bottom: 6px;
 	padding-left:	13px;
 	cursor: pointer;
-	color: white;
+	color: #353331;
+		font-weight: 500;  
+			text-shadow: 0 1px 0 #fff;
 	font-size: 100%;
+	border-top: solid 1px transparent;
+	border-bottom: solid 1px transparent;
+	border-right: solid 1px #dcdcdc;
+	border-collapse: collapse;
 }
 .mylist:before {
-	font-family: 'Material Icons';
-	content: "";
-	background-image: url('../image/list.png');
+	font-family: 'Octicons';
+	content: url("../fonts/octicons-5.0.1/lib/svg/file-directory.svg");
+	color: #444;
+	/* background-image: url('../image/mac-folder.png'); */
 	background-size: 16px;
 	font-size: 19px;
 	float:left;
@@ -95,15 +107,21 @@ body {
 	position: relative;
 	background-repeat: no-repeat;
 }
+.selected {
+	background-color: white;
+	border-top: solid 1px #dcdcdc;
+	border-bottom: solid 1px #dcdcdc;
+	border-right: 0;
+}
 .special:after {
 	font-family: 'Material Icons';
 	content: "";
 	background-image: url('../image/ic_open_in_new_white_24dp_1x.png');
-	background-size: 20px;
-	font-size: 20px;
+	background-size: 18px;
+	font-size: 18px;
 	float:right;
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	position: relative;
 	top: -3px;
 	right: 7px;
@@ -121,10 +139,16 @@ body {
 	background-image: url('../image/ic_watch_later_white_48dp_2x.png');
 }
 .mylist:hover {
-	background-color: #575757;
+	background-color: #f8f8f8;
+	border-top: solid 1px #e8e8e8;
+	border-bottom: solid 1px #e8e8e8;
+}
+.mylist.selected:hover {
+	background-color: white;
 }
 .mylist:active {
-	background-color: #666;
+	background-color: #dcdcdc;
+    box-shadow: inset 0 1px 6px rgba(0,0,0,.2);
 }
 .mylist .id {
 	display: none;
@@ -133,30 +157,32 @@ body {
 	background-color: #F1F1F1;
 }
 #mylistitem {
-
 	overflow-x: auto;
 	overflow-y: scroll; 
 	height: 472px !important;
-	background-color: white;
-	border-left: solid 1px #ddd;
+	 background-color: white; 
+	/* border-left: solid 1px #ddd; */
+	/* border-collapse: collapse; */
     text-shadow: 0 1px 0 #fff;
-	padding-top: 10px;
+	padding-top: 5px;
+	border-bottom: #eee;
 
 }
 .logoback {
-	background-image: url('../image/5.gif');
-	background-size: 40px;
+	background-image: url('../image/ff.png');
+	background-size: 100px;
     background-repeat: no-repeat;
     background-position: center;
 }
 #mylistheader {
-	background-color: #3E50B4;
+	text-shadow: 0 1px 0 #fff;
+		background: #fcfcfc;
+		border-bottom: solid 1px #dcdcdc;
 	font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Meiryo, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	border-left: 0;
 	padding-left: 5px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-	box-shadow: 0 2px 4px rgba(0,0,0,.2);
 	position: relative;
+	height: 25px;
 	z-index: 999;
     padding-right: 15px;
 }
@@ -197,13 +223,14 @@ body {
 #mylisttitle {
 	display: inline;
 	/*font-weight: bold;*/
-	font-size: 15px;
+	font-size: 12px;
 	margin-left: 13px;
-	color: white;
-	line-height: 41px;
+	color: #333;
+	font-weight: bold;
+	line-height: 28px;
     position: relative;
     
-	 font-weight: 500;
+	 /* font-weight: 500; */
 }
 #mylisttitle:before {
 	content: "";
@@ -290,10 +317,12 @@ input:focus {
   outline: 0;
 }
 .video {
-	background-color: white;
-	vertical-align: top;
-	margin-left: 10px;
-	margin-bottom: 15px;
+    background-color: white;
+    border-bottom: solid 1px #eaeaea;
+    vertical-align: top;
+    margin-left: 10px;
+    /* margin-bottom: 15px; */
+		padding: 5px 0;
 }
 .video:hover {
 }
@@ -310,19 +339,20 @@ input:focus {
     
 }
 .thumbnail {
-	width:			 130px;
-	height:			 73px;
+	width:			 115px;
+	height:			 65px;
 	background-color: white;
 	background-repeat: no-repeat;
 	position: relative;
 	background-size: contain;
 	background-position: top center;
+		border-radius: 3px;
 }
 .thumbnail.classic {
 	background-color: black;
 }
 .thumbnail.medium {
-	background-color: black;
+	background-color: white;
 	background-size: contain;
 	background-position: top center;
 }
@@ -371,6 +401,14 @@ input:focus {
 }
 .count .viewcount:after {
 	content: '再生';
+	margin-left: 3px;
+}
+.count .commentcount:after {
+	content: 'コメント';
+	margin-left: 3px;
+}
+.count .subscribeCount:after {
+	content: 'マイリスト';
 	margin-left: 3px;
 }
 .octicon {
