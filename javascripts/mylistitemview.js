@@ -20,6 +20,16 @@ class MyListItemView
         $('#mylistitem').children().remove();
     }
 
+    static jpDate(unixTime) {
+        const date = new Date(Number(unixTime) * 1000);
+        const hours = date.getHours();
+        return date.getFullYear() + "/" +
+            (date.getMonth() + 1) + "/" +
+            date.getDate() + " " +
+            (date.getHours()+'0').slice(0,2) + ":" +
+            (date.getMinutes()+'0').slice(0,2) + " 投稿";
+    }
+
     static toDom(video, template) {
         let vid = new Video(video);
         let dom = template.clone();
@@ -33,6 +43,7 @@ class MyListItemView
         dom.find('.video_length').text(vid.play_minTime + ':' + ('0' + vid.play_secTime).slice(-2));
         dom.find('.title .playurl').text(vid.title);
         dom.find('.id').text(video.id);
+        dom.find('.upload_time').text(MyListItemView.jpDate(vid.uploadTime));
         dom.find('.viewcount').text(Number(vid.playCount).toLocaleString());
 
         return dom;
@@ -59,10 +70,12 @@ class MyListItemView
         }
         if (vid.id < 24000000) {
             $thumbnail.css('background-image', `url(" ${vid.thumbnail}.L ")`);
-            $thumbnail.addClass('letterbox');
+            $thumbnail.addClass('medium');
             return;
         }
         if (vid.id >= 24000000) {
+            // $thumbnail.css('background-image', `url(" ${vid.thumbnail}.L ")`);
+            // $thumbnail.addClass('letterbox');
             $thumbnail.css('background-image', `url(" ${vid.thumbnail}.M ")`);
             $thumbnail.addClass('medium');
             return;
