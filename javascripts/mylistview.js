@@ -15,7 +15,6 @@ class MyListView
         let dom = $('<div class ="mylist"><span class="name"></span><span class="id"></span></div>');
         dom.find('.name').text(mylist.name);
         dom.find('.id').text(mylist.id);
-
         return dom;
     }
 
