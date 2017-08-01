@@ -16,7 +16,7 @@ body {
 }
 #menu {
 	float: left;
-	width: 185px;
+	width: 200px;
 	height: 100%;
 	overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -141,7 +141,6 @@ body {
 	border-left: solid 1px #ddd;
     text-shadow: 0 1px 0 #fff;
 	padding-top: 10px;
-	margin-left: 10px;
 
 }
 .logoback {
@@ -292,8 +291,6 @@ input:focus {
 }
 .video {
 	background-color: white;
-	width: 160px;
-	display: inline-block;
 	vertical-align: top;
 	margin-left: 10px;
 	margin-bottom: 15px;
@@ -313,35 +310,50 @@ input:focus {
     
 }
 .thumbnail {
-	width:			 160px;
-	height:			 90px;
-	background-color: black;
+	width:			 130px;
+	height:			 73px;
+	background-color: white;
 	background-repeat: no-repeat;
 	position: relative;
 	background-size: contain;
 	background-position: top center;
 }
+.thumbnail.classic {
+	background-color: black;
+}
+.thumbnail.medium {
+	background-color: black;
+	background-size: contain;
+	background-position: top center;
+}
+.thumbnail.letterbox {
+}
 .thumbnail:hover {
 	/*-webkit-filter: brightness(0.85);*/
 }
 .info {
+	display: inline-block;
 	position: relative;
-	vertical-align: middle;
+	vertical-align: top;
 }
 .title {
-	font-weight: bold;
-	margin: 5px;
-	margin-bottom: 3px;
-	margin-top: 5px;
-	/*height: 31px;*/
-	overflow : hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	/*color: #4078c0;*/
-
-	line-height: 16px;
+    font-weight: bold;
+    margin: 5px;
+    margin-bottom: 3px;
+    margin-top: 5px;
+    white-space: nowrap;
+    /* height: 31px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* display: -webkit-box; */
+    /* -webkit-box-orient: vertical; */
+    /* -webkit-line-clamp: 2; */
+    /* color: #4078c0; */
+    line-height: 16px;
+    width: 280px;
+}
+.playurl {
+		display: inline-block;
 }
 .title .playurl {
 	color: #3F3F3F;
@@ -358,7 +370,7 @@ input:focus {
 
 }
 .count .viewcount:after {
-	content: 'views';
+	content: '再生';
 	margin-left: 3px;
 }
 .octicon {
