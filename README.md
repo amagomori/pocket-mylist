@@ -1,4 +1,4 @@
-pocket-mylist
+otemoto-mylist
 ====
 
 A Google Chrome extension popup nicovideo.jp mylist.
@@ -9,6 +9,6 @@ nicovideo.jp/my/mylist is too slow and terrible to use.
 
 pocket-mylist can popup mylist quickly as Browser Action of Chrome API.
 
-##Demo
+## Demo
 
-![Alt Text](https://tsuyuno.github.io/resources/pokemy.png)
+![Alt Text](https://yurafuca.github.io/resources/pokemy.png)
