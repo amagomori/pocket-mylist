@@ -7,17 +7,29 @@
 <body style="width: 660px;">
 	<span class="octicon file-directory"></span>
 	<div id="menu">
-		  <!-- <div id="header" class="header">マイリスト一覧</div>   -->
+		   <!-- <div id="header" class="header">マイリスト一覧</div>    -->
 		<div id="mylistgroup" class="header-child"></div>
 	</div>
 	<div id="mainview" style="overflow: hidden;">
-		<!-- <div id ="mylistheader">
+		  <div id ="mylistheader">
 			<div id="headericon"></div>
-			<div id="mylisttitle">　</div>
+			<!-- <form id="search-container">
+				<select id="search-sort" name="sort" onChange={this.changeSortMode} value={this.state.sortMode}>
+					<option value="startTime-dsc">放送日時が近い順</option>
+					<option value="startTime-asc">放送日時が遠い順</option>
+					<option value="viewCounter-dsc">来場者数が多い順</option>
+					<option value="viewCounter-asc">来場者数が少ない順</option>
+					<option value="commentCounter-dsc">コメント数が多い順</option>
+					<option value="commentCounter-asc">コメント数が少ない順</option>
+				</select>
+			</form> -->
+			<div><span class="indicator"></span>
+			<div id="mylisttitle">左のメニューからマイリストを選択してください&nbsp;😘</div>
+			</div>
 			<a id="go_continuous">
 				<div id="play"></div>
 			</a>
-		</div> -->
+		</div>  
 		<div id="mylistitem" class="logoback"></div>
 	</div>
 	<script src="/javascripts/vendor/jquery-2.1.4.min.js"></script>
